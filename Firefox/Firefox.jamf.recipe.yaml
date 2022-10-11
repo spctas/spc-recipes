@@ -1,0 +1,17 @@
+Description:
+    Download Firefox from Mozilla, upload package to Jamf Pro Server/Distribution point using variable set in the environment.
+Identifier: com.github.spctas.jamf.Firefox
+ParentRecipe: com.github.autopkg.download.FirefoxSignedPkg
+MinimumVersion: '2.3'
+
+Input:
+    CATEGORY: Applications
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+  Arguments:
+    category_name: '%CATEGORY%'
+
+- Processor:
+  Arguments:
+    pkg_category: '%CATEGORY'
