@@ -6,6 +6,8 @@ MinimumVersion: '2.3'
 
 Input:
     CATEGORY: Browsers
+    NAME: Firefox
+    
 
 Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
