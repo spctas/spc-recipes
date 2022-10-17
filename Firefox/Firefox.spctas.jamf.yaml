@@ -5,7 +5,7 @@ ParentRecipe: com.github.autopkg.download.FirefoxSignedPkg
 MinimumVersion: '2.3'
 
 Input:
-    CATEGORY: Applications
+    CATEGORY: Browsers
 
 Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
@@ -14,4 +14,4 @@ Process:
 
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
   Arguments:
-    pkg_category: '%CATEGORY'%
+    pkg_category: '%CATEGORY%'
