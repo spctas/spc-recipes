@@ -10,9 +10,9 @@ Input:
     POLICY_NAME: Install %NAME%
     POLICY_CATEGORY: Browsers
     POLICY_TEMPLATE: MyJamfPolicyTemplate.xml
-    GROUP_NAME: Firefox-Update-smart
+    TESTING_GROUP_NAME: allStaff
+    GROUP_NAME: Device - Staff
     GROUP_TEMPLATE: MyJamfSmartGroupTemplate.xml
-    COMPUTERGROUP_NAME: allStaff
     SELF_SERVICE_DISPLAY_NAME: Install Latest %NAME%
     SELF_SERVICE_DESCRIPTION: Install the latest version of %NAME%.
     SELF_SERVICE_ICON: '%NAME%.png'
@@ -23,13 +23,11 @@ Process:
   Arguments:
     category_name: '%CATEGORY%'
 
+- Processor: StopProcessingIf
+  Arguments: 
+    predicate: '%UPDATE_PREDICATE%'
+
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
   Arguments:
     computergroup_name: '%GROUP_NAME%'
     computergroup_template: '%GROUP_TEMPLATE%'
-
-- Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
-  Arguments:
-    icon: '%SELF_SERVICE_ICON%'
-    policy_name: '%POLICY_NAME%'
-    policy_template: '%POLICY_TEMPLATE%'
