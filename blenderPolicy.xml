@@ -10,7 +10,7 @@
             <trigger_login>false</trigger_login>
             <trigger_network_state_changed>false</trigger_network_state_changed>
             <trigger_startup>false</trigger_startup>
-            <trigger_other>installBlender</trigger_other>
+            <trigger_other>Blender</trigger_other>
             <frequency>Ongoing</frequency>
             <retry_event>none</retry_event>
             <retry_attempts>-1</retry_attempts>
@@ -90,7 +90,7 @@
             <force_users_to_view_description>false</force_users_to_view_description>
             <self_service_icon>
                 <id>101</id>
-                <filename>blecnder_icon.png</filename>
+                <filename>blender_icon.png</filename>
                 <uri>https://ics.services.jamfcloud.com/icon/hash_8b4276822396bef0559899d050666f72538e474dc2fadbf4ece48f07597b5624</uri>
             </self_service_icon>
             <feature_on_main_page>false</feature_on_main_page>
